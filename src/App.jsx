@@ -9,7 +9,7 @@ import Nav from './components/Nav'
 import { NavLink, Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [ticketId, setTicketId] = useState('')
 
   return (
     <div>
@@ -19,7 +19,7 @@ function App() {
       <div>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/buytickets' element={<BuyTickets />} />
+          <Route path='/buytickets' element={<BuyTickets setTicketId={setTicketId} />} />
           <Route path='/ticket' element={<Ticket />} />
         </Routes>
       </div>

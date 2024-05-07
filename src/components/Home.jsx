@@ -7,7 +7,7 @@ const Home = () => {
         <div>
             <h1>Welcome To Janny's </h1>
             <div>
-
+                <div>{}</div>
             </div>
         </div>
 
