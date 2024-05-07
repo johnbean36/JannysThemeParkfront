@@ -1,9 +1,11 @@
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+
 //this is where you buy your tickets
 
 
-const BuyTickets = () => {
+const BuyTickets = (props) => {
 
     let navigate = useNavigate()
 
@@ -19,8 +21,10 @@ const BuyTickets = () => {
         setNewTicket({ ...newTicket, [e.target.name]: e.target.value })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
+        const response = await axios.post('https://jannysthemepark-84d4689535be.herokuapp.com/tickets', newTicket)
+        props.setId(response.data._id)
         navigate('/')
     }
 
@@ -40,7 +44,7 @@ const BuyTickets = () => {
                 <br />
 
                 <div>
-                    <button>Submit</button>
+                    <button>Purchase</button>
                 </div>
 
             </form>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -9,7 +9,18 @@ import Nav from './components/Nav'
 import { NavLink, Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [ticketId, setTicketId] = useState('')
+
+  console.log(ticketId)
+
+
+
+
+  const setId = (id) => {
+    setTicketId(id)
+  }
+
+
 
   return (
     <div>
@@ -18,9 +29,9 @@ function App() {
       </header>
       <div>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/buytickets' element={<BuyTickets />} />
-          <Route path='/ticket' element={<Ticket />} />
+          <Route path='/' element={<Home ticketId={ticketId} />} />
+          <Route path='/buytickets' element={<BuyTickets setId={setId} />} />
+          <Route path='/ticket' element={<Ticket ticketId={ticketId} />} />
         </Routes>
       </div>
     </div>
