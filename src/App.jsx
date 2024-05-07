@@ -9,7 +9,9 @@ import Nav from './components/Nav'
 import { NavLink, Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [ticketId, setTicketId] = useState('')
+
+
 
   return (
     <div>
