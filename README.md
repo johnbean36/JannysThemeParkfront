@@ -29,3 +29,9 @@ Welcome to Janny's World! Here at Janny's World we are using a MERN stack to sel
 ### **Deployed App**
 
 Take a look at the app [here!]() Heroku was used to deploy both the front and the back end.
+
+---
+
+### **Backend Development**
+
+Our backend repo (also [deployed on Heroku](https://jannysthemepark-84d4689535be.herokuapp.com/)) can be viewed [here](https://github.com/johnbean36/JannysThemePark)
