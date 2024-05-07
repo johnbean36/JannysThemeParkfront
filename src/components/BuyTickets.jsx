@@ -15,8 +15,6 @@ const BuyTickets = () => {
 
     })
 
-
-
     const handleChange = async (e) => {
         setNewTicket({ ...newTicket, [e.target.name]: e.target.value })
     }
