@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -11,6 +11,15 @@ import { NavLink, Routes, Route } from 'react-router-dom'
 function App() {
   const [ticketId, setTicketId] = useState('')
 
+  console.log(ticketId)
+
+
+
+
+  const setId = (id) => {
+    setTicketId(id)
+  }
+
 
 
   return (
@@ -21,8 +30,8 @@ function App() {
       <div>
         <Routes>
           <Route path='/' element={<Home ticketId={ticketId} />} />
-          <Route path='/buytickets' element={<BuyTickets setTicketId={setTicketId} />} />
-          <Route path='/ticket' element={<Ticket />} />
+          <Route path='/buytickets' element={<BuyTickets setId={setId} />} />
+          <Route path='/ticket' element={<Ticket ticketId={ticketId} />} />
         </Routes>
       </div>
     </div>
