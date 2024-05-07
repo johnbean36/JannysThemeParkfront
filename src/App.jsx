@@ -11,6 +11,8 @@ import { NavLink, Routes, Route } from 'react-router-dom'
 function App() {
   const [ticketId, setTicketId] = useState('')
 
+
+
   return (
     <div>
       <header>
@@ -18,7 +20,7 @@ function App() {
       </header>
       <div>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home ticketId={ticketId} />} />
           <Route path='/buytickets' element={<BuyTickets setTicketId={setTicketId} />} />
           <Route path='/ticket' element={<Ticket />} />
         </Routes>
