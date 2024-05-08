@@ -3,7 +3,7 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
-  background-image: url('/images/Castle_Circus_Amusement_Park_Happy_Holiday_Illustration_05_-Converted-_generated.jpg');
+  background-image: url("/images/Castle_Circus_Amusement_Park_Happy_Holiday_Illustration_05_-Converted-_generated.jpg");
   font-family: "Outfit", sans-serif;
 }
 
@@ -13,7 +13,6 @@ body {
   padding: 2rem;
   text-align: center;
 }
-
 
 h1 {
   color: rgb(44, 41, 78);

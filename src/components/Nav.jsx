@@ -7,6 +7,7 @@ const Nav = () => {
             <NavLink to='/'><div className='link'>HOME</div></NavLink>
             <NavLink to='/buytickets'><div className='link'>BUY TICKETS</div></NavLink>
             <NavLink to="/ticket"><div className='link'>Purchased Tickets</div></NavLink>
+            <NavLink to='/about'><div className='link'>About Us</div></NavLink>
         </div>
     )
 }
