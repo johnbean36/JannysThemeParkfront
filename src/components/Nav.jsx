@@ -12,13 +12,12 @@ const Nav = ({user}) => {
             <NavLink to="/ticket">View Tickets</NavLink>
             <NavLink to='/'><div className='link'>HOME</div></NavLink>
             <NavLink to='/buytickets'><div className='link'>BUY TICKETS</div></NavLink>
-            <NavLink to="/ticket"><div className='link'>Purchased Tickets</div></NavLink>
-            <NavLink to='/about'><div className='link'>About Us</div></NavLink>
+            <NavLink to="/ticket"><div className='link'>VIEW TICKETS</div></NavLink>
+            <NavLink to='/about'><div className='link'>ABOUT US</div></NavLink>
             &nbsp;&nbsp;&nbsp;
             {user ? (null) : (<NavLink to="/signup">Sign Up</NavLink>)}
             &nbsp;&nbsp;&nbsp;
             {user ? (null) : (<NavLink to="/signin">Sign In</NavLink>)}
-
         </div>
     )
 }

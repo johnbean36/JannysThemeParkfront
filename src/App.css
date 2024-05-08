@@ -65,9 +65,12 @@ button:hover{
   border: 2px solid rgb(230, 191, 244);
 }
 
-#ticket {
+#ticket, #about {
   border: 2px solid rgb(44, 41, 78);
   background-color: rgba(248, 238, 246, 0.7);
   border-radius: 10px;
 }
 
+#about {
+  padding: 0px 20px 10px 20px;
+}
