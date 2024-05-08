@@ -1,9 +1,11 @@
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+
 //this is where you buy your tickets
 
 
-const BuyTickets = () => {
+const BuyTickets = (props) => {
 
     let navigate = useNavigate()
 
@@ -15,26 +17,28 @@ const BuyTickets = () => {
 
     })
 
-
-
     const handleChange = async (e) => {
         setNewTicket({ ...newTicket, [e.target.name]: e.target.value })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
+        const response = await axios.post('https://jannysthemepark-84d4689535be.herokuapp.com/tickets', newTicket)
+        props.setId(response.data._id)
         navigate('/')
     }
 
     return (
-        <div>
+
+        <div className='ticketInput' id="ticket-form">
+          <h2>Ticket Info</h2>
             <form onSubmit={handleSubmit}>
                 <h3>Name</h3><input type='text' placeholder='name' name={'name'} onChange={handleChange} />
                 <h3>Date</h3><input type='date' placeholder='Date' name={'date'} onChange={handleChange} />
                 <h3>Age</h3><input type='number' placeholder='Age' name={'age'} onChange={handleChange} />
                 <h3>Pass Type</h3>
                 <select name={'pass'} onChange={handleChange}>
-                    <option>Jan Pass</option>
+                    <option>Yawn Pass</option>
                     <option>Jan Premium Pass</option>
                     <option>Jan Ultimate Pass</option>
                 </select>
@@ -42,7 +46,7 @@ const BuyTickets = () => {
                 <br />
 
                 <div>
-                    <button>Submit</button>
+                    <button>Purchase</button>
                 </div>
 
             </form>

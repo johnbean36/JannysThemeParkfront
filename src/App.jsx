@@ -6,9 +6,11 @@ import Ticket from './components/Ticket'
 import Home from './components/Home'
 import BuyTickets from './components/BuyTickets'
 import Nav from './components/Nav'
+import About from './components/About'
 import { NavLink, Routes, Route } from 'react-router-dom'
 
 function App() {
+
   const [ticketId, setTicketId] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -33,7 +35,6 @@ function App() {
     }
   }
 
-  console.log(ticketId)
 
   const setId = (id) => {
     setTicketId(id)
@@ -51,6 +52,7 @@ function App() {
           <Route path='/' element={<Home ticketId={ticketId} />} />
           <Route path='/buytickets' element={<BuyTickets setId={setId} />} />
           <Route path='/ticket' element={<Ticket ticketId={ticketId} />} />
+          <Route path='/about' element={<About />} />
           <Route path='/signup' element={<Signup handleChange={handleChange} />} />
         </Routes>
       </div>
