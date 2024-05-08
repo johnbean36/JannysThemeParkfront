@@ -10,11 +10,30 @@ import About from './components/About'
 import { NavLink, Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [ticketId, setTicketId] = useState('')
 
-  console.log(ticketId)
+  const [ticketId, setTicketId] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [user, setUser] = useState(null);
 
+  function handleChange(e, input){
+    if(input==="username"){
+      setUsername(e);
+    }
+    else if(input==="password"){
+      setPassword(e);
+    }
+  }
 
+  function handleSubmit(e, input){
+    if(input==="signup"){
+      e.preventDefault()
+      
+    }
+    else if(input==="signin"){
+      e.preventDefault()
+    }
+  }
 
 
   const setId = (id) => {
@@ -26,7 +45,7 @@ function App() {
   return (
     <div>
       <header>
-        <Nav />
+        <Nav user={user}/>
       </header>
       <div>
         <Routes>
@@ -34,6 +53,7 @@ function App() {
           <Route path='/buytickets' element={<BuyTickets setId={setId} />} />
           <Route path='/ticket' element={<Ticket ticketId={ticketId} />} />
           <Route path='/about' element={<About />} />
+          <Route path='/signup' element={<Signup handleChange={handleChange} />} />
         </Routes>
       </div>
     </div>
