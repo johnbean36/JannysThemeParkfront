@@ -29,8 +29,9 @@ const BuyTickets = (props) => {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <div id="ticket-form">
+            <h2>Ticket Info</h2>
+            <form onSubmit={handleSubmit} >
                 <h3>Name</h3><input type='text' placeholder='name' name={'name'} onChange={handleChange} />
                 <h3>Date</h3><input type='date' placeholder='Date' name={'date'} onChange={handleChange} />
                 <h3>Age</h3><input type='number' placeholder='Age' name={'age'} onChange={handleChange} />

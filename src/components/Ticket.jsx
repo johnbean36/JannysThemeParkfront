@@ -15,31 +15,21 @@ const Ticket = (props) => {
     }
 
 
-
-
     useEffect(() => {
         showTicket()
     }, [])
 
 
-
-
-
     return (
-
 
         <div>
             <h1>Tickets </h1>
-            <div>
+            <div id='ticket'>
                 <h3>{ticket.name}</h3>
                 <h3>{ticket.date}</h3>
                 <h3>{ticket.pass}</h3>
-
             </div>
         </div>
-
-
-
 
     )
 }
