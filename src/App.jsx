@@ -57,6 +57,7 @@ function App() {
           <Route path='/ticket' element={<Ticket ticketId={ticketId} />} />
           <Route path='/about' element={<About />} />
           <Route path='/signup' element={<Signup handleChange={handleChange} />} />
+          <Route path='/signin' element={<Signin handleChange={handleChange} />} />
         </Routes>
       </div>
     </div>
