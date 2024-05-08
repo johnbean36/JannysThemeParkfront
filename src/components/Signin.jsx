@@ -17,3 +17,5 @@ function Signup({handleChange, handleSubmit}){
         </div>
     )
 }
+
+export default Signup;
