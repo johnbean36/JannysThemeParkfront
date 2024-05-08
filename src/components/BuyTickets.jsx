@@ -31,16 +31,17 @@ const BuyTickets = (props) => {
     return (
 
         <div className='ticketInput' id="ticket-form">
-          <h2>Ticket Info</h2>
+            <h2>Ticket Info</h2>
             <form onSubmit={handleSubmit}>
                 <h3>Name</h3><input type='text' placeholder='name' name={'name'} onChange={handleChange} />
                 <h3>Date</h3><input type='date' placeholder='Date' name={'date'} onChange={handleChange} />
                 <h3>Age</h3><input type='number' placeholder='Age' name={'age'} onChange={handleChange} />
                 <h3>Pass Type</h3>
-                <select name={'pass'} onChange={handleChange}>
-                    <option>Yawn Pass</option>
-                    <option>Jan Premium Pass</option>
-                    <option>Jan Ultimate Pass</option>
+                <select name={'pass'} onChange={handleChange} defaultValue=''>
+                    <option></option>
+                    <option value='Yawn Pass'>Yawn Pass</option>
+                    <option value='Jan Premium Pass'>Jan Premium Pass</option>
+                    <option value='Jan Ultimate'>Jan Ultimate Pass</option>
                 </select>
                 <br />
                 <br />
