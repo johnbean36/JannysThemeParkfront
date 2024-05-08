@@ -19,6 +19,10 @@ h1 {
   font-size: 4rem;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
 header {
   margin: 10px;
 }
@@ -32,3 +36,38 @@ header {
   font-family: "Fugaz One", sans-serif;
   font-size: 10rem;
 }
+
+#ticket-form {
+  background-color: rgba(131, 126, 191, 0.4);
+  border-radius: 25px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin-top: 75px;
+}
+
+input, select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+button {
+  margin-top: 20px;
+  background-color: rgb(44, 41, 78);
+  color: rgb(247, 236, 247);
+  font-size: 17px;
+  padding: 7px 9px;
+  border: 2px solid rgb(44, 41, 78);
+  border-radius: 10px;
+}
+
+button:hover{
+  border: 2px solid rgb(230, 191, 244);
+}
+
+#ticket {
+  border: 2px solid rgb(44, 41, 78);
+  background-color: rgba(248, 238, 246, 0.7);
+  border-radius: 10px;
+}
+
