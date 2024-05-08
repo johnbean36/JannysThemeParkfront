@@ -26,7 +26,7 @@ const Ticket = (props) => {
             <h1>Tickets </h1>
             <div id='ticket'>
                 <h3>{ticket.name}</h3>
-                <h3>{ticket.date}</h3>
+                {ticket.date && <h3>{ticket.date.slice(0, 10)}</h3>}
                 <h3>{ticket.pass}</h3>
             </div>
         </div>
