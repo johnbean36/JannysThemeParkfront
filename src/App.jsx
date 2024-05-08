@@ -7,8 +7,8 @@ import Home from './components/Home'
 import BuyTickets from './components/BuyTickets'
 import Nav from './components/Nav'
 import About from './components/About'
-import Signup from '../components/Signup'
-import Signin from '../components/SIgnin'
+import Signup from './components/Signup'
+import Signin from './components/Signin'
 
 import { NavLink, Routes, Route } from 'react-router-dom'
 
